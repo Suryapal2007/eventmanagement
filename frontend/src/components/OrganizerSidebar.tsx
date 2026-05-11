@@ -14,7 +14,8 @@ import {
   ChevronRight,
   Briefcase,
   Bell,
-  UserCircle
+  UserCircle,
+  Newspaper
 } from "lucide-react";
 
 const navItems = [
@@ -22,6 +23,7 @@ const navItems = [
   { href: "/dashboard/organizer/create", label: "Create Event", icon: PlusCircle },
   { href: "/dashboard/organizer/manage", label: "Manage Events", icon: CalendarCog },
   { href: "/dashboard/organizer/participants", label: "Participants", icon: Users },
+  { href: "/dashboard/organizer/updates", label: "Event Updates", icon: Newspaper },
   { href: "/dashboard/organizer/reports", label: "Reports & Analytics", icon: BarChart3 },
   { href: "/dashboard/organizer/certificates", label: "Certificates", icon: Award },
   { href: "/dashboard/organizer/announcements", label: "Announcements", icon: Megaphone },

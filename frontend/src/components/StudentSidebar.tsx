@@ -11,7 +11,8 @@ import {
   UserCircle,
   LogOut,
   ChevronRight,
-  GraduationCap
+  GraduationCap,
+  Newspaper
 } from "lucide-react";
 
 const navItems = [
@@ -19,6 +20,7 @@ const navItems = [
   { href: "/dashboard/student/events", label: "Browse Events", icon: CalendarDays },
   { href: "/dashboard/student/registrations", label: "My Registrations", icon: Ticket },
   { href: "/dashboard/student/certificates", label: "Certificates", icon: Award },
+  { href: "/dashboard/student/updates", label: "Event Updates", icon: Newspaper },
   { href: "/dashboard/student/notifications", label: "Notifications", icon: Bell, badge: 3 },
   { href: "/dashboard/student/profile", label: "Profile", icon: UserCircle },
 ];
