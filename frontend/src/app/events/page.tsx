@@ -176,6 +176,7 @@ export default function EventsPage() {
           <p className="text-zinc-400">Try adjusting your filters or search term.</p>
         </div>
       )}
+      </div>
     </div>
   );
 }
