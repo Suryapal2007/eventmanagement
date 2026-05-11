@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Link from "next/link";
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,10 +41,7 @@ export default function RootLayout({
           {/* Glassmorphic Navbar */}
           <nav className="glass sticky top-0 z-50 px-6 py-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-              <Link href="/" className="flex items-center gap-2.5 hover:opacity-90 transition-opacity">
-                <img src="/logo.png" alt="CampusEsoul" className="w-9 h-9 rounded-xl object-cover" />
-                <span className="text-xl font-bold text-gradient">CampusEsoul</span>
-              </Link>
+              <AnimatedLogo />
               <div className="hidden md:flex items-center gap-8 text-sm font-medium">
                 <Link href="/events" className="hover:text-brand-violet transition-colors">Explore Events</Link>
                 <Link href="#clubs" className="hover:text-brand-violet transition-colors">Clubs</Link>
@@ -60,9 +58,8 @@ export default function RootLayout({
           <footer className="glass py-12 px-6 mt-20">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-zinc-400">
               <div className="col-span-1 md:col-span-2">
-                <div className="flex items-center gap-2.5 mb-4">
-                  <img src="/logo.png" alt="CampusEsoul" className="w-9 h-9 rounded-xl object-cover" />
-                  <span className="text-2xl font-bold text-gradient">CampusEsoul</span>
+                <div className="mb-4">
+                  <AnimatedLogo />
                 </div>
                 <p className="max-w-xs text-sm leading-relaxed">Empowering students to discover, create, and manage events with ease. Your gateway to a vibrant campus life.</p>
               </div>
