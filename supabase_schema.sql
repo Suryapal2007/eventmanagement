@@ -1,5 +1,5 @@
 -- ============================================================
--- CampusSphere Supabase Database Schema
+-- campusesoul Supabase Database Schema
 -- Run this in your Supabase SQL Editor:
 -- https://app.supabase.com > Project > SQL Editor
 -- ============================================================

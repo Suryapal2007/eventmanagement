@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CampusSphere | Elevate Your Campus Life",
+  title: "CampusEsoul | Elevate Your Campus Life",
   description: "The ultimate platform for college events, workshops, and networking.",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
   openGraph: {
-    title: "CampusSphere",
+    title: "CampusEsoul",
     description: "The ultimate college event management platform.",
     images: ["/logo.png"],
   },
@@ -41,8 +41,8 @@ export default function RootLayout({
           <nav className="glass sticky top-0 z-50 px-6 py-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
               <Link href="/" className="flex items-center gap-2.5 hover:opacity-90 transition-opacity">
-                <img src="/logo.png" alt="CampusSphere" className="w-9 h-9 rounded-xl object-cover" />
-                <span className="text-xl font-bold text-gradient">CampusSphere</span>
+                <img src="/logo.png" alt="CampusEsoul" className="w-9 h-9 rounded-xl object-cover" />
+                <span className="text-xl font-bold text-gradient">CampusEsoul</span>
               </Link>
               <div className="hidden md:flex items-center gap-8 text-sm font-medium">
                 <Link href="/events" className="hover:text-brand-violet transition-colors">Explore Events</Link>
@@ -61,8 +61,8 @@ export default function RootLayout({
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-zinc-400">
               <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center gap-2.5 mb-4">
-                  <img src="/logo.png" alt="CampusSphere" className="w-9 h-9 rounded-xl object-cover" />
-                  <span className="text-2xl font-bold text-gradient">CampusSphere</span>
+                  <img src="/logo.png" alt="CampusEsoul" className="w-9 h-9 rounded-xl object-cover" />
+                  <span className="text-2xl font-bold text-gradient">CampusEsoul</span>
                 </div>
                 <p className="max-w-xs text-sm leading-relaxed">Empowering students to discover, create, and manage events with ease. Your gateway to a vibrant campus life.</p>
               </div>
@@ -84,7 +84,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 text-center text-xs text-zinc-500">
-              &copy; {new Date().getFullYear()} CampusSphere. All rights reserved.
+              &copy; {new Date().getFullYear()} CampusEsoul. All rights reserved.
             </div>
           </footer>
         </div>

@@ -13,7 +13,7 @@ export default function OrganizerProfilePage() {
     phone: "+91 99887 65432",
     role: "Event Organizer",
     department: "Student Affairs",
-    organization: "CampusSphere Cultural Committee",
+    organization: "CampusEsoul Cultural Committee",
     bio: "Passionate about creating unforgettable campus experiences. Organized 20+ events in the last 2 years.",
   });
 

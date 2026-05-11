@@ -239,7 +239,7 @@ export default function CreateEventPage() {
                     <ul className="space-y-1 text-zinc-400 text-xs">
                       <li>• Platform fee: <strong className="text-white">2% per transaction</strong></li>
                       <li>• Payouts are processed within <strong className="text-white">T+2 business days</strong></li>
-                      <li>• Refunds handled automatically by CampusSphere</li>
+                      <li>• Refunds handled automatically by CampusEsoul</li>
                     </ul>
                   </div>
                 </motion.div>

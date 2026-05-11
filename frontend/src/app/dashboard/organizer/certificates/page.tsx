@@ -216,7 +216,7 @@ export default function OrganizerCertificatesPage() {
                 <p className="text-white/70 text-sm mb-4">has successfully participated in</p>
                 <h3 className="text-xl font-bold text-amber-300 mb-6">{selectedEventData?.title}</h3>
                 <div className="w-32 h-0.5 bg-white/30 mb-6" />
-                <p className="text-white/50 text-xs">Issued by CampusSphere · {selectedEventData?.date}</p>
+                <p className="text-white/50 text-xs">Issued by CampusEsoul · {selectedEventData?.date}</p>
               </motion.div>
             </motion.div>
           )}

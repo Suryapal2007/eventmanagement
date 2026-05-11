@@ -28,7 +28,7 @@ export default function RegisterPage() {
         <div className="relative z-10">
           <div className="text-center mb-10">
             <h1 className="text-3xl font-bold mb-2">Create Account</h1>
-            <p className="text-zinc-400">Join the CampusSphere community</p>
+            <p className="text-zinc-400">Join the CampusEsoul community</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">

@@ -49,7 +49,7 @@ export default function LoginPage() {
         <div className="relative z-10">
           <div className="text-center mb-10">
             <h1 className="text-3xl font-bold mb-2">Welcome Back</h1>
-            <p className="text-zinc-400">Login to your CampusSphere account</p>
+            <p className="text-zinc-400">Login to your CampusEsoul account</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">

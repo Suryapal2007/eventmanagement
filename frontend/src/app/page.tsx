@@ -178,7 +178,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto glass-morphism p-16 rounded-[4rem] relative overflow-hidden">
           <div className="relative z-10">
             <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to transform <br /> your campus?</h2>
-            <p className="text-xl text-zinc-400 mb-12">Join CampusSphere today and start building amazing experiences.</p>
+            <p className="text-xl text-zinc-400 mb-12">Join CampusEsoul today and start building amazing experiences.</p>
             <a
               href="/register"
               className="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-white text-black font-extrabold hover:scale-105 transition-all"
