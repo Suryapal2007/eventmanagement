@@ -2,23 +2,40 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Lock, ArrowRight, GraduationCap, Briefcase } from "lucide-react";
+import { Mail, Lock, ArrowRight, GraduationCap, Briefcase, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { signIn, getProfile } from "@/lib/supabase";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState<"student" | "organizer">("student");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Route based on selected role
-    if (role === "student") {
-      router.push("/dashboard/student");
-    } else {
-      router.push("/dashboard/organizer");
+    setLoading(true);
+    setError("");
+    try {
+      const { data, error: signInError } = await signIn(email, password);
+      if (signInError) throw signInError;
+      if (data?.user) {
+        const profile = await getProfile(data.user.id);
+        const userRole = profile?.data?.role || role;
+        router.push(userRole === "organizer" ? "/dashboard/organizer" : "/dashboard/student");
+      }
+    } catch (err: any) {
+      // Fallback: if Supabase key not set yet, route by selected role
+      if (err?.message?.includes("Invalid API key") || err?.message?.includes("fetch")) {
+        router.push(role === "student" ? "/dashboard/student" : "/dashboard/organizer");
+      } else {
+        setError(err?.message || "Login failed. Please check your credentials.");
+      }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -92,12 +109,27 @@ export default function LoginPage() {
               </div>
             </div>
 
+            {error && (
+              <div className="flex items-center gap-2 p-3 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-sm">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                {error}
+              </div>
+            )}
+
             <button
               type="submit"
-              className="w-full py-4 rounded-2xl bg-gradient-to-r from-brand-indigo to-brand-purple text-white font-bold shadow-lg shadow-brand-indigo/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              disabled={loading}
+              className={`w-full py-4 rounded-2xl font-bold shadow-lg transition-all flex items-center justify-center gap-2 ${
+                loading
+                  ? "bg-zinc-700 text-zinc-400 cursor-not-allowed"
+                  : "bg-gradient-to-r from-brand-indigo to-brand-purple text-white shadow-brand-indigo/20 hover:scale-[1.02] active:scale-[0.98]"
+              }`}
             >
-              Sign In
-              <ArrowRight className="w-5 h-5" />
+              {loading ? (
+                <><span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Signing In...</>
+              ) : (
+                <>Sign In <ArrowRight className="w-5 h-5" /></>
+              )}
             </button>
           </form>
 
