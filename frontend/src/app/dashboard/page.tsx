@@ -9,7 +9,8 @@ import {
   LogOut,
   Bell,
   Search,
-  Plus
+  Plus,
+  Calendar
 } from "lucide-react";
 import Link from "next/link";
 
